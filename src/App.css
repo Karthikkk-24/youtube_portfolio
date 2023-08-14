@@ -6,11 +6,28 @@
   --gray: #717171;
   --black: #0f0f0f;
   --red: #ff0000;
+  --borders: #2a2a2a;
+  --search: #222222;
 }
 
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
 }
 
 body {
@@ -29,6 +46,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  background: var(--black);
+}
+
+.navbar i {
+  color: var(--white);
+  cursor: pointer;
 }
 
 .navbar_container {
@@ -36,7 +59,121 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.navbar_1,
+.navbar_2,
+.navbar_3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar_1 {
+  width: 10%;
+}
+
+.navbar_2 {
+  width: 40%;
+  gap: 30px;
+}
+
+.navbar_3 {
+  width: 10%;
+}
+
+.hamburger_menu,
+.portfolio,
+.search_bar,
+.microphone,
+.video,
+.bell,
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.portfolio p {
+  color: var(--white);
+}
+
+.portfolio i {
+  color: var(--red);
+}
+
+.search_input {
+  background: transparent;
+  padding-left: 20px;
+  font-size: 16px;
+  color: var(--white);
+  outline: none;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.search_bar {
+  border-radius: 30px;
+  border: 2px solid var(--borders);
+  height: 70%;
+  width: 100%;
+}
+
+.search_bar .search_icon {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid var(--borders);
+}
+
+.microphone {
+  height: 100%;
+  width: 10%;
+}
+
+.microphone_icon {
+  background: var(--search);
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.profile {
+  height: 100%;
+  width: 30%;
+}
+
+.profile_icon {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 70%;
+  overflow: hidden;
+}
+
+.portfolio {
+  flex-direction: row;
+  gap: 5px;
 }
 
 .content_container {
@@ -45,4 +182,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
+}
+
+.content_div {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar_container {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.sidebar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
 }

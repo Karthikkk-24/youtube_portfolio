@@ -1,17 +1,17 @@
 import { useState } from "react";
 import "./App.css";
+import Content from "./components/Content";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <div className="main_container">
-        <div className="navbar_container"></div>
+        <div className="navbar_container">
+          <Navbar />
+        </div>
         <div className="content_container">
-          <div className="sidebar_container"></div>
-          <div className="content">
-            <div className="category_bar"></div>
-            <div className="programming_container"></div>
-          </div>
+          <Content />
         </div>
       </div>
     </>
