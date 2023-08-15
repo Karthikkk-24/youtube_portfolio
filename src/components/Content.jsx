@@ -1,4 +1,5 @@
 import "../../src/App.css";
+import ContentContainer from "../../src/components/ContentContainer";
 import Sidebar from "../../src/components/Sidebar";
 
 export default function App() {
@@ -8,8 +9,7 @@ export default function App() {
         <Sidebar />
       </div>
       <div className="content">
-        <div className="category_bar"></div>
-        <div className="programming_container"></div>
+        <ContentContainer />
       </div>
     </div>
   );
