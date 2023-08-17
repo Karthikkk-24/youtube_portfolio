@@ -321,11 +321,11 @@ input {
 
 .programming_container {
   width: 100%;
-  height: 94%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow-y: auto;
   padding: 1rem;
 }
 
@@ -333,9 +333,8 @@ input {
   width: 100%;
   height: 90vh;
   display: grid;
-  grid-template-columns: repeat(4, 23%);
+  grid-template-columns: repeat(5, 18%);
   gap: 2%;
-  overflow-y: auto;
 }
 
 .programming_container .container .card_div {
@@ -360,6 +359,33 @@ input {
   align-items: center;
   overflow: hidden;
   justify-content: center;
+  position: relative;
+}
+
+.card_img .progress {
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: gray;
+  display: none;
+}
+
+.progress_bar {
+  width: 0;
+  height: 100%;
+  background: var(--red);
+}
+
+.card_profile_section {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  padding: 0.6rem 0;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
 }
 
 .programming_container .container .card_div .card_title {
@@ -373,26 +399,91 @@ input {
   gap: 10px;
 }
 
-.card_div .card_title img {
+.programming_container .content_divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 20px 0;
+  padding: 0.5rem 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: red;
+}
+
+.programming_container .content_divider_line {
+  width: 100%;
+  height: 3px;
+  background: var(--gray);
+}
+
+.programming_container .content_header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 1rem 0.5rem;
+}
+
+.programming_container .content_header_icon {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.programming_container .content_header_name {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.card_div .card_profile img {
   border-radius: 50%;
   height: 40px;
   width: 40px;
   aspect-ratio: 1/1;
 }
 
+.card_info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .programming_container .container .card_div .card_desc {
   width: 100%;
-  color: var(--white);
+  color: var(--gray);
   height: 15%;
-  font-size: 13px;
+  font-size: 12px;
   display: flex;
   gap: 15px;
   align-items: center;
   cursor: pointer;
-  justify-content: center;
+  justify-content: flex-start;
   user-select: none;
+  padding: 0 0.2rem;
 }
 
 .card_desc span {
   font-size: 20px;
+}
+
+@media screen and (max-width: 1700px) {
+  .programming_container .container {
+    grid-template-columns: repeat(4, 23%);
+  }
 }
